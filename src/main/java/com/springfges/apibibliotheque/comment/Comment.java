@@ -1,5 +1,6 @@
 package com.springfges.apibibliotheque.comment;
 
+import com.springfges.apibibliotheque.user.Customer;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -16,4 +17,7 @@ public class Comment {
     @Id
     private int id;
     private String content;
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 }
