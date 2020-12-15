@@ -10,15 +10,15 @@ insert into book(id,title,category,author,cover) values (4,'Metro 2035','adolesc
 insert into book(id,title,category,author,cover) values (5,'tchoupi','enfant','Thierry Courtin', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Fahrenheit451HUNcover.jpg/250px-Fahrenheit451HUNcover.jpg');
 insert into book(id,title,category,author,cover) values (6,'Bob l eponge','enfant','Patrick Pinney', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Fahrenheit451HUNcover.jpg/250px-Fahrenheit451HUNcover.jpg');
 
-insert into comment(id, title, content, customer_id, book_id) values (1, 'Époustouflant', 'Un livre incroyable plein de rebondissements.', 1, 1)
-insert into comment(id, title, content, customer_id, book_id) values (2, 'Bof', 'Un livre plein de phrases, je pase mon tour.', 4, 1)
-insert into comment(id, title, content, customer_id, book_id) values (3, 'Bien', 'Vraiment un bon livre.', 2, 2)
-insert into comment(id, title, content, customer_id, book_id) values (4, 'Génial', 'Un chef d''oeuvre.', 3, 2)
-insert into comment(id, title, content, customer_id, book_id) values (5, 'Je recommande', 'Quel livre, vraiment incroyable.', 1, 3)
-insert into comment(id, title, content, customer_id, book_id) values (6, 'Pas ouf', 'Une belle histoire, mais une mauvaise fin.', 2, 3)
-insert into comment(id, title, content, customer_id, book_id) values (7, 'Nul', 'Qui à osé écrire ça ?', 3, 4)
-insert into comment(id, title, content, customer_id, book_id) values (8, 'Ringard', 'Un livre comme ça en 2020 ? Impensable.', 4, 4)
-insert into comment(id, title, content, customer_id, book_id) values (9, 'Je ne recommande pas', 'Fuyer, l''histoire est à dormir debout.', 3, 5)
-insert into comment(id, title, content, customer_id, book_id) values (10, 'Mauvais livre', 'Un livre qui n''as pas tenus ses promesses.', 1, 5)
-insert into comment(id, title, content, customer_id, book_id) values (11, 'Un incontournable', 'Il ne faut pas le contourner, c''est un bon livre.', 4, 6)
-insert into comment(id, title, content, customer_id, book_id) values (12, 'Lisez-le', 'Vraiment, le livre est bien.', 2, 6)
+insert into comment(id, title, content, customer_id, book_id) values (1, 'Époustouflant', 'Un livre incroyable plein de rebondissements.', 1, 1);
+insert into comment(id, title, content, customer_id, book_id) values (2, 'Bof', 'Un livre plein de phrases, je pase mon tour.', 4, 1);
+insert into comment(id, title, content, customer_id, book_id) values (3, 'Bien', 'Vraiment un bon livre.', 2, 2);
+insert into comment(id, title, content, customer_id, book_id) values (4, 'Génial', 'Un chef d''oeuvre.', 3, 2);
+insert into comment(id, title, content, customer_id, book_id) values (5, 'Je recommande', 'Quel livre, vraiment incroyable.', 1, 3);
+insert into comment(id, title, content, customer_id, book_id) values (6, 'Pas ouf', 'Une belle histoire, mais une mauvaise fin.', 2, 3);
+insert into comment(id, title, content, customer_id, book_id) values (7, 'Nul', 'Qui à osé écrire ça ?', 3, 4);
+insert into comment(id, title, content, customer_id, book_id) values (8, 'Ringard', 'Un livre comme ça en 2020 ? Impensable.', 4, 4);
+insert into comment(id, title, content, customer_id, book_id) values (9, 'Je ne recommande pas', 'Fuyer, l''histoire est à dormir debout.', 3, 5);
+insert into comment(id, title, content, customer_id, book_id) values (10, 'Mauvais livre', 'Un livre qui n''as pas tenus ses promesses.', 1, 5);
+insert into comment(id, title, content, customer_id, book_id) values (11, 'Un incontournable', 'Il ne faut pas le contourner, c''est un bon livre.', 4, 6);
+insert into comment(id, title, content, customer_id, book_id) values (12, 'Lisez-le', 'Vraiment, le livre est bien.', 2, 6);
