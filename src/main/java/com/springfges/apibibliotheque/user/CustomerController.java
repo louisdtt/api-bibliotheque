@@ -23,13 +23,10 @@ public class CustomerController {
     public Customer addCustomer(@RequestBody Customer customer) throws RuntimeException{
         if(customer.getAge() > 0 && customer.getAge() <13) {
             customer.setCategory("Enfant");
-            System.out.println("enfant");
         } else if(customer.getAge() >= 13 && customer.getAge() < 18) {
             customer.setCategory("Ado");
-            System.out.println("ado");
         } else if(customer.getAge() >= 18) {
             customer.setCategory("adulte");
-            System.out.println("adulte");
         } else {
             throw new RuntimeException("Wrong age");
         }
