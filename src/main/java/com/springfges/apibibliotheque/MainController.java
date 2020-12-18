@@ -20,7 +20,7 @@ public class MainController {
     @Autowired
     CustomerRepository customerRepository;
 
-    @PostMapping("/signIn")
+    @PostMapping("/signin")
     public String signIn(@RequestBody Customer customer) {
 
         Customer customerTmp = customerRepository.findByLogin(customer.getLogin())
@@ -66,9 +66,19 @@ public class MainController {
         return access_token;
     }
 
-    @PostMapping("/signUp")
-    public String signUp(@RequestBody String userCredentials) {
+    @PostMapping("/signup")
+    public Customer signUp(@RequestBody Customer customer) {
+        customer.setId(customerRepository.findAll().size()+1);
 
-        return "signup";
+        if(customer.getAge() > 0 && customer.getAge() < 13) {
+            customer.setCategory("enfant");
+        } else if(customer.getAge() >= 13 && customer.getAge() < 18) {
+            customer.setCategory("adolescent");
+        } else if(customer.getAge() >= 18) {
+            customer.setCategory("adulte");
+        } else {
+            throw new RuntimeException("Wrong age");
+        }
+        return customerRepository.save(customer);
     }
 }
