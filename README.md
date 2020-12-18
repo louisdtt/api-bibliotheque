@@ -7,7 +7,7 @@ Spring API to manage Library business.
 ```json
 {
     "login": 123,
-    "password": "password",
+    "password": "password"
 }
 ```
 * Sign up : `POST /signUp/`
@@ -16,7 +16,7 @@ Spring API to manage Library business.
     "name": "Lucas",
     "age": 10,
     "login": "lucas",
-    "password": "1234",
+    "password": "1234"
 }
 ```
 
