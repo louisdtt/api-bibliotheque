@@ -3,14 +3,14 @@ Spring API to manage user, books and comments from a library.
 
 
 # Open Endpoints
-* Sign in : `POST /signIn/`
+* Sign in : `POST /signin/`
 ```json
 {
     "login": 123,
     "password": "password"
 }
 ```
-* Sign up : `POST /signUp/`
+* Sign up : `POST /signup/`
 ```json
 {
     "name": "Lucas",
@@ -23,10 +23,10 @@ Spring API to manage user, books and comments from a library.
 
 # Endpoints that require Authentication
 ## User
-* Get all users : `GET api/user/`
-* Get a user by id : `GET api/user/{id}/`
-* Search a user by name : `GET api/user/search/{name}/`
-* Update a user : `PUT api/user/{id}/`
+* Get all users : `GET /user/`
+* Get a user by id : `GET /user/{id}/`
+* Search a user by name : `GET /user/search/{name}/`
+* Update a user : `PUT /user/{id}/`
 ```json
 {
     "name": "update",
@@ -34,17 +34,17 @@ Spring API to manage user, books and comments from a library.
     "category": "Enfant"
 }
 ```
-* Delete a user : `DELETE api/user/{id}/`
+* Delete a user : `DELETE /user/{id}/`
 * Borrow a book from this user : `POST api/user/{userId}/book/{bookId}/`
 
 ## Book
-* Get all books : `GET api/book/`
+* Get all books : `GET /book/`
 
-* Get a book by id : `GET api/book/{id}/`
+* Get a book by id : `GET /book/{id}/`
 
-* Search a book by title : `GET api/book/search/{title}/`
+* Search a book by title : `GET /book/search/{title}/`
 
-* Add a book : `POST api/book/`
+* Add a book : `POST /book/`
 ```json
 {
     "id": 7,
@@ -55,7 +55,7 @@ Spring API to manage user, books and comments from a library.
 }
 ```
 
-* Update a book : `PUT api/book/{id}/`
+* Update a book : `PUT /book/{id}/`
 ```json
 {
     "id": 7,
@@ -66,16 +66,16 @@ Spring API to manage user, books and comments from a library.
 }
 ```
 
-* Delete a book : `DELETE api/book/{id}/`
+* Delete a book : `DELETE /book/{id}/`
 
 ## Comment
-* Get all comments : `GET api/comment/`
+* Get all comments : `GET /comment/`
 
-* Get a comment by id : `GET api/comment/{id}/`
+* Get a comment by id : `GET /comment/{id}/`
 
-* Search a comment by title : `GET api/comment/search/{title}/`
+* Search a comment by title : `GET /comment/search/{title}/`
 
-* Add a comment : `POST api/book/`
+* Add a comment : `POST /book/`
 ```json
 {
     "id": 13,
@@ -86,7 +86,7 @@ Spring API to manage user, books and comments from a library.
 }
 ```
 
-* Update a comment : `PUT api/comment/{id}/`
+* Update a comment : `PUT /comment/{id}/`
 ```json
 {
     "id": 13,
@@ -97,7 +97,7 @@ Spring API to manage user, books and comments from a library.
 }
 ```
 
-* Delete a comment : `DELETE api/comment/{id}/`
+* Delete a comment : `DELETE /comment/{id}/`
 
 
 # Test Insomnia
