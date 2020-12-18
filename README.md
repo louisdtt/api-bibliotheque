@@ -35,7 +35,7 @@ Spring API to manage user, books and comments from a library.
 }
 ```
 * Delete a user : `DELETE /user/{id}/`
-* Borrow a book from this user : `POST api/user/{userId}/book/{bookId}/`
+* Borrow a book from this user : `POST /user/{userId}/book/{bookId}/`
 
 ## Book
 * Get all books : `GET /book/`
