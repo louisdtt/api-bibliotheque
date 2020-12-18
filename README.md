@@ -1,5 +1,5 @@
 # Library API
-Spring API to manage user, books and comment from a library.
+Spring API to manage user, books and comments from a library.
 
 
 # Open Endpoints
