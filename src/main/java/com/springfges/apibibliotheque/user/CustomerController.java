@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.Set;
 
 @RestController
-@RequestMapping(path="/user")
+@RequestMapping(path="api/user")
 public class CustomerController {
 
     @Autowired
@@ -19,9 +19,9 @@ public class CustomerController {
     @Autowired
     private BookRepository bookRepository;
 
-    @PostMapping("add")
+    @PostMapping("/add")
     public Customer addCustomer(@RequestBody Customer customer) throws RuntimeException{
-        if(customer.getAge() > 0 && customer.getAge() <13) {
+        if(customer.getAge() > 0 && customer.getAge() < 13) {
             customer.setCategory("Enfant");
         } else if(customer.getAge() >= 13 && customer.getAge() < 18) {
             customer.setCategory("Ado");
@@ -33,12 +33,12 @@ public class CustomerController {
         return customerRepository.save(customer);
     }
 
-    @GetMapping("search/{userName}")
+    @GetMapping("/search/{userName}")
     public Optional<Customer> getCustomerByName(@PathVariable("userName") String userName){
         return customerRepository.findByName(userName);
     }
 
-    @PostMapping("{userId}/borrow/{bookId}")
+    @PostMapping("/{userId}/borrow/{bookId}")
     public ResponseEntity<Customer> updateCustomer(@PathVariable("userId") int userId, @PathVariable("bookId") int bookId) throws Exception {
         Customer customer = customerRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("Customer not found for this id :: " + userId));

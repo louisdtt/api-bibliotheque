@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path="/comment")
+@RequestMapping(path="api/comment")
 
 public class CommentController {
     @Autowired
     private CommentRepository commentRepository;
 
-    @GetMapping("search/{title}")
+    @GetMapping("/search/{title}")
     public Optional<Comment> getComment(@PathVariable("title") String title){
         return commentRepository.findByTitle(title);
     }
