@@ -12,7 +12,6 @@ import java.util.Set;
 @RestController
 @RequestMapping(path="api/user")
 public class CustomerController {
-
     @Autowired
     private CustomerRepository customerRepository;
 

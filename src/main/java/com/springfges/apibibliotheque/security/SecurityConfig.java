@@ -3,6 +3,7 @@ package com.springfges.apibibliotheque.security;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -14,6 +15,8 @@ import org.springframework.security.oauth2.jwt.*;
  * Configures our application with Spring Security to restrict access to our API endpoints.
  */
 @EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Value( "${auth0.audience}" )
@@ -31,8 +34,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable().authorizeRequests()
                 .mvcMatchers("/signIn").permitAll()
                 .mvcMatchers("/signUp").permitAll()
+                .mvcMatchers("/api/book").authenticated()
                 .mvcMatchers("/api/book/{*}").authenticated()
                 .mvcMatchers("/api/book/search/{*}").authenticated()
+                .mvcMatchers("/api/comment").authenticated()
+                .mvcMatchers("/api/comment/{*}").authenticated()
+                .mvcMatchers("/api/comment/search/{*}").authenticated()
+                .mvcMatchers("/api/user").authenticated()
+                .mvcMatchers("/api/user/{*}").authenticated()
+                .mvcMatchers("/api/user/add").authenticated()
+                .mvcMatchers("/api/user/search/{*}").authenticated()
+                .mvcMatchers("/api/user/{*}/borrow/{*}").authenticated()
                 .and().cors()
                 .and().oauth2ResourceServer().jwt();
     }
