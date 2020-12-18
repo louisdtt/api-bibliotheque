@@ -4,14 +4,9 @@ import com.springfges.apibibliotheque.user.Customer;
 import com.springfges.apibibliotheque.user.CustomerRepository;
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
-import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.crypto.Data;
-
-import com.google.gson.Gson;
-import java.util.ArrayList;
 
 @RestController
 @RequestMapping(path="")

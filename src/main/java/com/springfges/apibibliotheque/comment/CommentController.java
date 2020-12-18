@@ -1,7 +1,5 @@
 package com.springfges.apibibliotheque.comment;
 
-import com.springfges.apibibliotheque.book.Book;
-import com.springfges.apibibliotheque.book.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
