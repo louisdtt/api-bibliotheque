@@ -101,7 +101,7 @@ Spring API to manage user, books and comments from a library.
 
 
 # Test Insomnia
-Import /api/Insomnia_API_Bibliotheque.json on Insomnia.
+Import Insomnia_2020-12-18.json on Insomnia.
 
 
 # Authors
