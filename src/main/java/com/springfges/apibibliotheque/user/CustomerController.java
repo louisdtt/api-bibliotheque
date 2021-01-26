@@ -45,8 +45,8 @@ public class CustomerController {
         Book book = bookRepository.findById(bookId)
                 .orElseThrow(() -> new RuntimeException("Book not found for this id :: " + bookId));
 
-        Boolean checkEnfant = customer.getCategory().equals("enfant") && (book.getCategory().equals("ado") || book.getCategory().equals("adulte"));
-        Boolean checkAdo = customer.getCategory().equals("ado") && book.getCategory().equals("adulte");
+        Boolean checkEnfant = customer.getCategory().equals("enfant") && (book.getCategory().equals("adolescent") || book.getCategory().equals("adulte"));
+        Boolean checkAdo = customer.getCategory().equals("adolescent") && book.getCategory().equals("adulte");
 
         if(checkEnfant || checkAdo){
             throw new RuntimeException("You are not old enough to borrow this book.");
