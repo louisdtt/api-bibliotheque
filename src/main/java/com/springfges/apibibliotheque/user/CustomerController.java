@@ -2,10 +2,12 @@ package com.springfges.apibibliotheque.user;
 
 import com.springfges.apibibliotheque.book.Book;
 import com.springfges.apibibliotheque.book.BookRepository;
+import com.springfges.apibibliotheque.comment.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -17,6 +19,11 @@ public class CustomerController {
 
     @Autowired
     private BookRepository bookRepository;
+
+    @GetMapping
+    public List<Customer> getCustommers() {
+        return customerRepository.findAll();
+    }
 
     @PostMapping("/add")
     public Customer addCustomer(@RequestBody Customer customer) throws RuntimeException{
